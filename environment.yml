@@ -8,3 +8,4 @@ dependencies:
   - pip
   - prokka
   - htseq
+  - bowtie2
