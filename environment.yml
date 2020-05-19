@@ -6,8 +6,6 @@ channels:
 dependencies:
   - python
   - pip
-  - pip:
-    - KEGGDecoder
   - prokka
   - htseq
   - bowtie2
