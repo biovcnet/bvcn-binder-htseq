@@ -35,5 +35,10 @@ Run htseq-count, only counting the reads mapping to the reverse strand
 
     htseq-count Candidatus-Tremblaya-princeps_PCIT.sam PROKKA_05192020/cds_PROKKA_05192020.gff -t CDS -i ID -c Candidatus-Tremblaya-princeps_PCIT.reverse.counts --nonunique none -s reverse
 
+Inspect and compare the ouputs
+
+run counts-to-tpm script to convert read counts to normalized value: transcripts per million (TPM)
+
+
 
 
