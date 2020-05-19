@@ -9,18 +9,29 @@ Part of the [Bioinformatics Virtual Coordination Network](https://biovcnet.githu
 
 ## Walkthrough
 
-Command description
+Build bowtie2 index out of the Tremblaya genome
 
-    command
+    bowtie2-build -f Candidatus-Tremblaya-princeps_PCIT.fa Candidatus-Tremblaya-princeps_PCIT.fa
 
-Command description
+Map sample reads to the index using bowtie2
 
-    command
+    bowtie2 -x Candidatus-Tremblaya-princeps_PCIT.fa -U PCIT.sample.fastq -S Candidatus-Tremblaya-princeps_PCIT.sam --no-unal
 
-Command description
+Generate GFF file using Prokka
 
-    command
+    prokka Candidatus-Tremblaya-princeps_PCIT.fa
 
-Command description
+Extract CDS rows from the GFF file
 
-    command
+    grep -P '\tCDS' PROKKA_05192020.gff > cds_PROKKA_05192020.gff
+
+Run htseq-count
+
+    htseq-count Candidatus-Tremblaya-princeps_PCIT.sam PROKKA_05192020/cds_PROKKA_05192020.gff -t CDS -i ID -c Candidatus-Tremblaya-princeps_PCIT.reverse.counts --nonunique none
+
+Run htseq-count, only counting the reads mapping to the reverse strand
+
+    htseq-count Candidatus-Tremblaya-princeps_PCIT.sam PROKKA_05192020/cds_PROKKA_05192020.gff -t CDS -i ID -c Candidatus-Tremblaya-princeps_PCIT.reverse.counts --nonunique none -s reverse
+
+
+
