@@ -25,6 +25,8 @@ Extract CDS rows from the GFF file
 
     grep -P '\tCDS' PROKKA_05192020.gff > cds_PROKKA_05192020.gff
 
+Examine the feature type and GFF attribute to be used as feature ID.
+
 Run htseq-count
 
     htseq-count Candidatus-Tremblaya-princeps_PCIT.sam PROKKA_05192020/cds_PROKKA_05192020.gff -t CDS -i ID -c Candidatus-Tremblaya-princeps_PCIT.reverse.counts --nonunique none
