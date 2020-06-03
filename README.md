@@ -27,6 +27,10 @@ Extract CDS rows from the GFF file
 
 Examine the feature type and GFF attribute to be used as feature ID.
 
+Generate GFF file using Prodigal
+
+    prodigal -f gff -o gammas.prodigal.gff -i gammas.fna -a gammas.fna-proteins.faa -d gammas.fna-proteins.ffn -p meta
+
 Run htseq-count
 
     htseq-count Candidatus-Tremblaya-princeps_PCIT.sam PROKKA_05192020/cds_PROKKA_05192020.gff -t CDS -i ID -c Candidatus-Tremblaya-princeps_PCIT.reverse.counts --nonunique none
