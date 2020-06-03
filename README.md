@@ -29,7 +29,7 @@ Examine the feature type and GFF attribute to be used as feature ID.
 
 Generate GFF file using Prodigal
 
-    prodigal -f gff -o gammas.prodigal.gff -i gammas.fna -a gammas.fna-proteins.faa -d gammas.fna-proteins.ffn -p meta
+    prodigal -f gff -o Candidatus-Tremblaya-princeps_PCIT.prodigal.gff -i Candidatus-Tremblaya-princeps_PCIT.fa -a Candidatus-Tremblaya-princeps_PCIT.fa-proteins.faa -d Candidatus-Tremblaya-princeps_PCIT.fa-proteins.ffn -p meta
 
 Run htseq-count
 
